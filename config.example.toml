@@ -1,0 +1,46 @@
+# radarr-auto-add-people configuration
+#
+# Mount this at /config/config.toml, or pass a path as the first argument,
+# or point CONFIG_FILE at it.
+
+tmdb_key = "your-tmdb-api-key"
+
+[radarr]
+host = "http://radarr"
+port = 7878
+key = "your-radarr-api-key"
+
+# Optional: basic auth in front of Radarr.
+# user = "username"
+# pass = "password"
+
+# Optional: set when Radarr is served from a subpath, e.g. http://host/radarr.
+# urlbase = "radarr"
+
+# Only consider credits released in the last N days. Omit for no date filter.
+daysreleased = 365
+
+root_folder_path = "/movies"
+monitored = true
+search = true
+
+# One of: announced, inCinemas, released, preDB. Omit to let Radarr decide.
+minimum_availability = "released"
+
+# Quality profile per TMDB original_language. `default` is required.
+[radarr.profiles]
+default = 1
+# en = 1
+# ja = 2
+
+# TMDB person id -> roles to follow.
+# "actor" matches cast credits; anything else is matched as a substring
+# against the crew `job` field (e.g. "director", "writer", "composer").
+[people]
+287 = ["actor"]                  # Brad Pitt
+525 = ["director", "writer"]     # Christopher Nolan
+
+# Optional: POST {"message": ..., "title": ...} on every add.
+[notifications.homeassistant]
+url = "http://172.18.0.21:1880/node-red/notifications"
+title = "Radarr-Auto-Add"

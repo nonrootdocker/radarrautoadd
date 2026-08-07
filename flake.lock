@@ -1,0 +1,48 @@
+{
+  "nodes": {
+    "minimalbase": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1786098172,
+        "narHash": "sha256-Fsdyl+p/ZDYYpmPHhgH0suMwWL8bUGj8tkzwVOLFQgI=",
+        "owner": "nonrootdocker",
+        "repo": "minimalbase",
+        "rev": "2669553edcf3f823dd397766e6416c8e636b94ad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nonrootdocker",
+        "repo": "minimalbase",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1785115938,
+        "narHash": "sha256-Lr2gry/rxJUMzCo6N/ttfEOd6EP2o4x84DxpYfSFu1s=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4bae3fedb1d092b4870d6a8aaaa67cd9f4bd4907",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "minimalbase": "minimalbase",
+        "nixpkgs": [
+          "minimalbase",
+          "nixpkgs"
+        ]
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

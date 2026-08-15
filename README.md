@@ -13,7 +13,7 @@ The program reads a single TOML file. It looks, in order, at:
 
 1. the first command-line argument,
 2. `$CONFIG_FILE`,
-3. `/config/config.toml` (the container default).
+3. `/data/config.toml` (the container default).
 
 Start from [`config.example.toml`](config.example.toml). Unknown keys are
 rejected, so typos fail loudly at startup rather than being silently ignored.

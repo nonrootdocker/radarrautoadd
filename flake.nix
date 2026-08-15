@@ -84,7 +84,6 @@
             "PATH=/bin"
             "TZ=UTC"
             "LANG=en_US.UTF-8"
-            "CONFIG_FILE=/data/config.toml"
             "RUST_LOG=info"
           ];
         };

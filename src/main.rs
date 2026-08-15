@@ -16,7 +16,7 @@ use config::Config;
 use radarr::{AddMovie, AddOptions, Radarr};
 use tmdb::{Credit, Tmdb};
 
-const DEFAULT_CONFIG_PATH: &str = "/config/config.toml";
+const DEFAULT_CONFIG_PATH: &str = "/data/config.toml";
 
 /// A credit we have decided to add, with the person who earned it.
 struct Candidate {

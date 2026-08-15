@@ -51,7 +51,7 @@
           mode = "triggered";
           args = [ ];
           cwd = "/data";
-          dirs = [ "/config" "/data" ];
+          dirs = [ "/data" ];
         };
       };
       destination = "/app/main";

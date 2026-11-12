@@ -32,7 +32,7 @@ jobs:
             experimental-features = nix-command flakes
 
       - name: Update flake inputs and open PR
-        uses: DeterminateSystems/update-flake-lock@v28
+        uses: DeterminateSystems/update-flake-lock@v29
         with:
           inputs: minimalbase
           token: ${{ steps.app-token.outputs.token }}
